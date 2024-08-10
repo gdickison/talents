@@ -20,6 +20,8 @@ module.exports = {
       colors: {
         't-gold': '#FFE06B',
         't-light-brown': '#7D5123',
+        't-med-brown': '#333333',
+        't-brown': '#494949',
         't-dark-brown': '#252525',
         't-tan': '#ECD592',
         't-orange': '#E5AF44',

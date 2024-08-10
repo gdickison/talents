@@ -5,7 +5,10 @@ import ToggleSwitch from "@/components/ToggleSwitch"
 
 function BusinessLandingScreen() {
   return (
-    <div className="flex flex-col items-center mt-12">
+    <div className="flex flex-col items-center mt-12 relative">
+      <div className="py-4 flex justify-center fixed top-[85%]">
+        <ToggleSwitch/>
+      </div>
       <h6 className='text-left'>Business Landing Screen</h6>
       <div className='w-[375px] h-screen bg-t-dark-brown'>
         <div>
@@ -21,9 +24,6 @@ function BusinessLandingScreen() {
               <div className="w-full text-white text-[43px] font-normal font-['Marion']">
                 Preston
               </div>
-            </div>
-            <div className="py-4 flex justify-center">
-              <ToggleSwitch/>
             </div>
             <div className="flex flex-col gap-6">
               <div className="text-center text-white text-[23px] font-normal font-['Marion']">

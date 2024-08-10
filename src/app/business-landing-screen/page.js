@@ -25,11 +25,13 @@ function BusinessLandingScreen() {
             <div className="py-4 flex justify-center">
               <ToggleSwitch/>
             </div>
-            <div className="text-center text-white text-[23px] font-normal font-['Marion']">
-              <OrdersList/>
-            </div>
-            <div className="text-center text-white text-[23px] font-normal font-['Marion']">
-              <ProductsList/>
+            <div className="flex flex-col gap-6">
+              <div className="text-center text-white text-[23px] font-normal font-['Marion']">
+                <OrdersList/>
+              </div>
+              <div className="text-center text-white text-[23px] font-normal font-['Marion']">
+                <ProductsList/>
+              </div>
             </div>
           </div>
         </div>

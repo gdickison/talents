@@ -30,8 +30,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${marcellus_sc.variable} ${dm_sans.variable} ${marion.variable}`}>{children}</body>
+    <html lang="en" className="bg-gray-900 h-full">
+      <body className={`h-full ${marcellus_sc.variable} ${dm_sans.variable} ${marion.variable}`}>{children}</body>
     </html>
   );
 }

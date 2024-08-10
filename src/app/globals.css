@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-*, :root {
+/* *, :root {
   background-color: #f9fafb;
-}
+} */
 
 body {
   width: 100%;
@@ -95,8 +95,8 @@ p, .p {
   font-size: var(--fs-xs);
 }
 
-@layer utilities {
+/* @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */

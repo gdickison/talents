@@ -95,8 +95,54 @@ p, .p {
   font-size: var(--fs-xs);
 }
 
-/* @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-} */
+/* BEGIN TOGGLE SWITCH */
+
+.theme-checkbox {
+  --toggle-size: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 6.25em;
+  height: 3.125em;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #E5AF44), color-stop(50%, #252525)) no-repeat;
+  background: -o-linear-gradient(left, #E5AF44 50%, #252525 50%) no-repeat;
+  background: linear-gradient(to right, #E5AF44 50%, #252525 50%) no-repeat;
+  background-size: 205%;
+  background-position: 0;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 99em;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--toggle-size);
+}
+
+.theme-checkbox::before {
+  content: "";
+  width: 2.25em;
+  height: 2.25em;
+  position: absolute;
+  top: 0.438em;
+  left: 0.438em;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #E5AF44), color-stop(50%, #252525)) no-repeat;
+  background: -o-linear-gradient(left, #E5AF44 50%, #252525 50%) no-repeat;
+  background: linear-gradient(to right, #E5AF44 50%, #252525 50%) no-repeat;
+  background-size: 205%;
+  background-position: 100%;
+  border-radius: 50%;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.theme-checkbox:checked::before {
+  left: calc(100% - 2.25em - 0.438em);
+  background-position: 0;
+}
+
+.theme-checkbox:checked {
+  background-position: 100%;
+}
+
+/* END TOGGLE SWITCH */

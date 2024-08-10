@@ -6,6 +6,7 @@ function Home() {
       <Link href={'/design-system'}>Design System</Link>
       <Link href={'/business-landing-screen'}>Business Landing Screen</Link>
       <Link href={'/account-settings'}>Account Settings</Link>
+      <Link href={'/toggle-switch'}>Toggle Switch</Link>
     </div>
   )
 }

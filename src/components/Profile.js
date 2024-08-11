@@ -86,6 +86,54 @@ export default function Profile() {
             </div>
 
             <div className="border-b border-gray-50/10 pb-12">
+              <h2 className="text-base font-semibold leading-7 text-gray-50">Plaid Account Information</h2>
+
+              <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8">
+                <div className="">
+                  <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-50">
+                    Plaid Username
+                  </label>
+                  <div className="mt-2">
+                    <input
+                      id="first-name"
+                      name="first-name"
+                      type="text"
+                      className="block w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm text-base px-1 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
+                    />
+                  </div>
+                </div>
+
+                <div className="">
+                  <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-gray-50">
+                    Plaid account connection
+                  </label>
+                  <div className="mt-2">
+                    <input
+                      id="last-name"
+                      name="last-name"
+                      type="text"
+                      className="block w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm text-base px-1 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
+                    />
+                  </div>
+                </div>
+
+                <div className="">
+                  <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-50">
+                    [Whatever else Plaid needs]
+                  </label>
+                  <div className="mt-2">
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      className="block w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm text-base px-1 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="border-b border-gray-50/10 pb-12">
               <h2 className="text-base font-semibold leading-7 text-gray-50">Personal Information</h2>
 
               <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8">
@@ -205,6 +253,7 @@ export default function Profile() {
                 </div>
               </div>
             </div>
+
             <div className="border-b border-gray-50/10 pb-12">
               <h2 className="text-base font-semibold leading-7 text-gray-50">Business Information</h2>
 

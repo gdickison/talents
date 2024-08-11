@@ -1,4 +1,5 @@
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
+import SmallToggle from './SmallToggle'
 
 export default function Profile() {
   return (
@@ -134,7 +135,14 @@ export default function Profile() {
             </div>
 
             <div className="border-b border-gray-50/10 pb-12">
-              <h2 className="text-base font-semibold leading-7 text-gray-50">Personal Information</h2>
+              <div className="flex flex-col gap-4">
+                <h2 className="text-base font-semibold leading-7 text-gray-50">Personal Information</h2>
+                <SmallToggle
+                  label={'Toggle to make public'}
+                />
+              </div>
+
+
 
               <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8">
                 <div className="">
@@ -255,7 +263,12 @@ export default function Profile() {
             </div>
 
             <div className="border-b border-gray-50/10 pb-12">
-              <h2 className="text-base font-semibold leading-7 text-gray-50">Business Information</h2>
+            <div className="flex flex-col gap-4">
+                <h2 className="text-base font-semibold leading-7 text-gray-50">Business Information</h2>
+                <SmallToggle
+                  label={'Toggle to make public'}
+                />
+              </div>
 
               <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8">
                 <div className="">

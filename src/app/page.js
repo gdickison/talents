@@ -7,6 +7,7 @@ function Home() {
       <Link href={'/business-landing-screen'}>Business Landing Screen</Link>
       <Link href={'/profile-settings'}>Profile Settings Component</Link>
       <Link href={'/toggle-switch'}>Toggle Switch Component</Link>
+      <Link href={'/small-toggle'}>Small Toggle Switch Component</Link>
       <Link href={'/account-balance'}>Account Balance Component</Link>
       <Link href={'/order-list'}>Orders List Component</Link>
       <Link href={'/product-list'}>Product List Component</Link>

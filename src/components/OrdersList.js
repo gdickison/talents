@@ -68,8 +68,8 @@ export default function OrdersList () {
           </div>
         </div>
         <ul role="list" className="px-3 m-1 bg-t-med-brown rounded-md">
-          {orders.map((order) => (
-            <li key={order.email} className="flex justify-between gap-x-6 py-5 ">
+          {orders.map((order, i) => (
+            <li key={i} className="flex justify-between gap-x-6 py-5 ">
               <div className="flex min-w-0 gap-x-4">
                 <img alt="" src={order.imageUrl} className="h-12 w-12 flex-none bg-gray-800" />
                 <div className="min-w-0 flex-auto text-left">

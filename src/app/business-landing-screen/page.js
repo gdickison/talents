@@ -7,7 +7,7 @@ import ToggleSwitch from "@/components/ToggleSwitch"
 
 function BusinessLandingScreen() {
   return (
-    <div className="flex flex-col items-center mt-12 relative">
+    <div className="flex flex-col items-center -m-5 relative">
       <div className="py-4 flex justify-center fixed top-[575px]">
         <ToggleSwitch/>
       </div>

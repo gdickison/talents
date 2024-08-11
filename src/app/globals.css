@@ -146,3 +146,29 @@ p, .p {
 }
 
 /* END TOGGLE SWITCH */
+
+#profile-form-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 1.0s ease-out;
+}
+
+#profile-input:checked ~ #profile-form-wrapper {
+  grid-template-rows: 1fr;
+}
+
+#profile-form-arrow {
+  transition: transform 0.5s ease-in-out;
+}
+
+#profile-form-arrow:hover {
+  transform: rotate(-90deg);
+}
+
+#profile-input:checked ~ label > #profile-form-arrow {
+  transform: rotate(-90deg);
+}
+
+#profile-form {
+  overflow: hidden;
+}

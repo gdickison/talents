@@ -11,7 +11,7 @@ function classNames(...classes) {
 
 export default function AccountBalance() {
   return (
-    <dl className="m-1 grid grid-cols-1 gap-4 bg-gray-900/5 sm:grid-cols-2 lg:grid-cols-4">
+    <dl className="m-1 grid grid-cols-1 gap-4 bg-gray-900/5">
       <div>
         <h3 className="text-left px-3">Account</h3>
         <p className="py-3">Click an item for details.</p>

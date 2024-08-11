@@ -2,6 +2,7 @@
 import AccountBalance from "@/components/AccountBalance"
 import OrdersList from "@/components/OrdersList"
 import ProductsList from "@/components/ProductsList"
+import Profile from "@/components/Profile"
 import ToggleSwitch from "@/components/ToggleSwitch"
 
 function BusinessLandingScreen() {
@@ -35,6 +36,9 @@ function BusinessLandingScreen() {
               </div>
               <div className="text-center text-white text-[23px] font-normal font-['Marion']">
                 <AccountBalance/>
+              </div>
+              <div className="text-center text-white text-[23px] font-normal font-['Marion']">
+                <Profile/>
               </div>
             </div>
           </div>

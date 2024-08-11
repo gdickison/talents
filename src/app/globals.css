@@ -151,7 +151,7 @@ p, .p {
 
 #profile-form-wrapper {
   display: grid;
-  grid-template-rows: 0fr;
+  grid-template-rows: 1fr; /* set this to 0 for production */
   transition: grid-template-rows 1.0s ease-out;
 }
 

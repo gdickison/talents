@@ -1,7 +1,7 @@
 export default function DesignSystem() {
   return (
     
-    <main className="flex flex-col gap-12">
+    <main className="flex flex-col gap-12 bg-white">
       <div className="font-marcellus">
         <div className="h4 font-sembold text-gray-700">Font Family: Marcellus SC</div>
         <div className="h1">3xl - Lorem ipsum dolor sit</div>

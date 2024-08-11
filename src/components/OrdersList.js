@@ -1,52 +1,40 @@
 /* eslint-disable @next/next/no-img-element */
-const people = [
+const orders = [
   {
-    name: 'Premium Hammer',
-    email: 'leslie.alexander@example.com',
-    role: 'Shipped',
+    item: 'Premium Hammer',
+    status: 'Shipped',
     imageUrl: '/hammer.png',
-    lastSeen: '3h ago',
-    lastSeenDateTime: '2023-01-23',
+    orderDate: '2023-01-23',
   },
   {
-    name: 'Premium Hammer',
-    email: 'michael.foster@example.com',
-    role: 'Pending',
+    item: 'Premium Hammer',
+    status: 'Pending',
     imageUrl: '/hammer.png',
-    lastSeen: '3h ago',
-    lastSeenDateTime: '2023-01-23',
+    orderDate: '2023-01-23',
   },
   {
-    name: 'Premium Hammer',
-    email: 'dries.vincent@example.com',
-    role: 'Shipped',
+    item: 'Premium Hammer',
+    status: 'Shipped',
     imageUrl: '/hammer.png',
-    lastSeen: null,
-    lastSeenDateTime: '2023-01-23',
+    orderDate: '2023-01-23',
   },
   {
-    name: 'Premium Hammer',
-    email: 'lindsay.walton@example.com',
-    role: 'Delivered',
+    item: 'Premium Hammer',
+    status: 'Delivered',
     imageUrl: '/hammer.png',
-    lastSeen: '3h ago',
-    lastSeenDateTime: '2023-01-23',
+    orderDate: '2023-01-23',
   },
   {
-    name: 'Premium Hammer',
-    email: 'courtney.henry@example.com',
-    role: 'Delivered',
+    item: 'Premium Hammer',
+    status: 'Delivered',
     imageUrl: '/hammer.png',
-    lastSeen: '3h ago',
-    lastSeenDateTime: '2023-01-23',
+    orderDate: '2023-01-23',
   },
   {
-    name: 'Premium Hammer',
-    email: 'tom.cook@example.com',
-    role: 'Pending',
+    item: 'Premium Hammer',
+    status: 'Pending',
     imageUrl: '/hammer.png',
-    lastSeen: null,
-    lastSeenDateTime: '2023-01-23',
+    orderDate: '2023-01-23',
   },
 ]
 
@@ -80,20 +68,20 @@ export default function OrdersList () {
           </div>
         </div>
         <ul role="list" className="px-3 m-1 bg-t-med-brown rounded-md">
-          {people.map((person) => (
-            <li key={person.email} className="flex justify-between gap-x-6 py-5 ">
+          {orders.map((order) => (
+            <li key={order.email} className="flex justify-between gap-x-6 py-5 ">
               <div className="flex min-w-0 gap-x-4">
-                <img alt="" src={person.imageUrl} className="h-12 w-12 flex-none bg-gray-800" />
+                <img alt="" src={order.imageUrl} className="h-12 w-12 flex-none bg-gray-800" />
                 <div className="min-w-0 flex-auto text-left">
-                  <p className="text-base leading-6 text-white">{person.name}</p>
+                  <p className="text-base leading-6 text-white">{order.item}</p>
                   <p className="mt-1 text-sm leading-5 text-gray-400">
-                    Ordered <time dateTime={person.lastSeenDateTime}>{person.lastSeenDateTime}</time>
+                    Ordered <time dateTime={order.orderDate}>{order.orderDate}</time>
                   </p>
                 </div>
               </div>
               <div className="shrink-0 flex items-start gap-6">
-                <p className="text-base leading-6 text-white">{person.role}</p>
-                <img src={`${person.role === 'Shipped' ? '/ship.png' : person.role === 'Delivered' ? '/package.png' : '/clock.png'}`} alt="" />
+                <p className="text-base leading-6 text-white">{order.role}</p>
+                <img src={`${order.status === 'Shipped' ? '/ship.png' : order.status === 'Delivered' ? '/package.png' : '/clock.png'}`} alt="" />
               </div>
             </li>
           ))}

@@ -149,22 +149,12 @@ p, .p {
 
 /* PROFILE FORM TRANSITION */
 
-#profile-form-wrapper {
-  display: grid;
-  grid-template-rows: 0fr; /* set this to 0 for production */
-  transition: grid-template-rows 1.0s ease-out;
-}
-
 #profile-input:checked ~ #profile-form-wrapper {
   grid-template-rows: 1fr;
 }
 
 #profile-form-arrow {
   transition: transform 0.5s ease-in-out;
-}
-
-#profile-form-arrow:hover {
-  transform: rotate(-90deg);
 }
 
 #profile-input:checked ~ label > #profile-form-arrow {

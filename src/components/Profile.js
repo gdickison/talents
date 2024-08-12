@@ -1,15 +1,24 @@
+/* eslint-disable @next/next/no-img-element */
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 import SmallToggle from './SmallToggle'
 
-export default function Profile() {
+export default function Profile({gridrows}) {
+  // Set gridrows to 1 for development, 0 for production. 1 will always show the form; 0 will hide the form pending the transition 
   return (
     <>
+      <style>
+        {`#profile-form-wrapper {
+            display: grid;
+            grid-template-rows: ${gridrows || 0}fr;
+            transition: grid-template-rows 1.0s ease-out;
+        }`}
+      </style>
       <input id='profile-input' type="checkbox" className='hidden' />
       <label htmlFor="profile-input" className='flex items-center space-x-1 cursor-pointer px-3'>
         <h3>Profile</h3>
         <img id='profile-form-arrow' src="/arrow_down.png" alt="open profile" className='h-6 w-6' />
       </label>
-      <div id="profile-form-wrapper">
+      <div id="profile-form-wrapper" >
         <form id='profile-form' className='px-3 text-left'>
           <div className="space-y-12 font-dm-sans">
             <div className="border-b border-gray-50/10 pb-12">

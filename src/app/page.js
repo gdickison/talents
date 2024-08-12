@@ -17,7 +17,7 @@ function Home() {
         <Link href={'/order-list'}>Orders List Component</Link>
         <Link href={'/product-list'}>Product List Component</Link>
       </div>
-      <div className="grid grid-cols-3 gap-12 text-white mx-auto font-marion">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-12 text-white mx-auto font-marion">
         <div className="w-96">
           <AccountBalance/>
         </div>
@@ -26,6 +26,11 @@ function Home() {
         </div>
         <div className="w-96">
           <ProductsList/>
+        </div>
+        <div className="w-96">
+          <Profile
+            gridrows={1}
+          />
         </div>
       </div>
     </div>

@@ -102,12 +102,6 @@ export default function OrdersList () {
                       <img className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 h-12" src="/blue-check-heavy.png" alt="" />
 
                     </div>
-                    {/* <div className="relative">
-                      <img className="h-8 w-24 opacity-45" src={'/arrow_right.png'} alt="" />
-                      <span className="text-sm absolute top-1/2 left-1/5 -translate-x-1/5 -translate-y-1/2 w-20 text-center">
-                        {getTimeToShip(order)} Days
-                      </span>
-                    </div> */}
                     <div className="flex flex-col items-center">
                       <span className="text-sm w-20 font-bold text-center">
                         {getTimeToShip(order)} Days
@@ -118,12 +112,6 @@ export default function OrdersList () {
                       <img className={`absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 h-6 ${order.status === 'Shipped' || order.status === 'Delivered' ? 'opacity-100' : 'opacity-50'}`} src={'/ship.png'} alt="shipped" />
                       <img className={`absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 h-12 ${order.status === 'Shipped' || order.status === 'Delivered' ? 'opacity-100' : 'opacity-0'}`} src={'/blue-check-heavy.png'} alt="shipped" />
                     </div>
-                    {/* <div className="relative">
-                      <img className="h-8 w-24 opacity-45" src={'/arrow_right.png'} alt="" />
-                      <span className={`text-sm top-1/2 left-1/5 -translate-x-1/5 -translate-y-1/2 w-20 text-center ${order.status === 'Shipped' || order.status === 'Delivered' ? 'absolute' : 'hidden'}`}>
-                        {getTimeToDeliver(order)} Days
-                      </span>
-                    </div> */}
                     <div className="flex flex-col items-center">
                       <span className={`text-sm w-20 font-bold text-center ${order.status === 'Shipped' || order.status === 'Delivered' ? 'block' : 'hidden'}`}>
                         {getTimeToDeliver(order)} Days
@@ -139,7 +127,7 @@ export default function OrdersList () {
             )
           })}
           <div className="flex justify-center">
-            <button type="button" class="w-1/2 rounded-md  px-3 py-2 mx-auto text-sm font-semibold text-white shadow-sm border border-t-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-t-light-blue">Show More</button>
+            <button type="button" clasNames="w-1/2 rounded-md  px-3 py-2 mx-auto text-sm font-semibold text-white shadow-sm border border-t-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-t-light-blue">Show More</button>
           </div>
         </ul>
       </div>

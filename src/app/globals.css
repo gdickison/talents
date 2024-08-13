@@ -98,7 +98,7 @@ p, .p {
 /* BEGIN TOGGLE SWITCH */
 
 .theme-checkbox {
-  --toggle-size: 16px;
+  --toggle-size: 12px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

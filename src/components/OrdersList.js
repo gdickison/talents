@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Filters from "./Filters"
 const orders = [
   {
     item: 'Premium Hammer',
@@ -70,38 +71,13 @@ export default function OrdersList () {
   }
 
   return (
-    <div className="">
+    <div className="font-marion text-white">
       <h3 className="text-left px-3">Orders</h3>
       <div className="font-dm-sans">
         <p className="py-3">Click an order for details.</p>
         <div className="">
           <p className="text-left px-3 text-sm">Filter by Year / Month</p>
-          <div className="flex gap-4 px-3 py-3">
-            <select className="w-24 h-6 text-sm bg-t-tan text-black rounded-full px-2 outline-none appearance-none bg-[url('/arrow_down.png')] bg-no-repeat bg-[length:1rem]" style={{backgroundPosition: 'right 0.25rem top 50%'}} name="month" id="month">
-              <option value="january">January</option>
-              <option value="february">February</option>
-              <option value="march">March</option>
-              <option value="april">April</option>
-              <option value="may">May</option>
-              <option value="june">June</option>
-              <option value="july">July</option>
-              <option value="august">August</option>
-              <option value="september">September</option>
-              <option value="october">October</option>
-              <option value="november">November</option>
-              <option value="december">December</option>
-            </select>
-            <select className="w-24 h-6 text-sm bg-t-tan text-black rounded-full px-2 outline-none appearance-none bg-[url('/arrow_down.png')] bg-no-repeat bg-[length:1rem]" style={{backgroundPosition: 'right 0.25rem top 50%'}} name="year" id="year">
-              <option value="2024">2024</option>
-              <option value="2025">2025</option>
-            </select>
-            <select className="w-24 h-6 text-sm bg-t-tan text-black rounded-full px-2 outline-none appearance-none bg-[url('/arrow_down.png')] bg-no-repeat bg-[length:1rem]" style={{backgroundPosition: 'right 0.25rem top 50%'}} name="year" id="year">
-              <option value="all">All</option>
-              <option value="pending">Pending</option>
-              <option value="shipped">Shipped</option>
-              <option value="delivered">Delivered</option>
-            </select>
-          </div>
+          <Filters/>
         </div>
         <ul role="list" className="px-3 m-1 bg-t-med-brown rounded-md">
           {orders.map((order, i) => (
@@ -126,7 +102,6 @@ export default function OrdersList () {
           {orders.map((order, i) => {
             return (
               <li key={i} className="grid gap-x-2 grid-rows-2 grid-flow-col" style={{gridTemplateColumns: '5rem 1fr'}}>
-
                   <div className="row-span-2 w-20 h-20 flex justify-start items-center">
                     <img alt="" src={order.imageUrl} className="h-16 w-16 flex-none bg-gray-800 row-span-2" />
                   </div>

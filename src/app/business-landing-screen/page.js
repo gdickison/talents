@@ -28,13 +28,13 @@ function BusinessLandingScreen() {
               </div>
             </div>
             <div className="flex flex-col gap-6">
-              <div className="text-center text-white text-[23px] font-normal font-['Marion']">
+              <div className="">
                 <OrdersList/>
               </div>
               <div className="text-center text-white text-[23px] font-normal font-['Marion']">
                 <ProductsList/>
               </div>
-              <div className="text-center text-white text-[23px] font-normal font-['Marion']">
+              <div className="">
                 <AccountBalance/>
               </div>
               <div className="text-center text-white text-[23px] font-normal font-['Marion']">

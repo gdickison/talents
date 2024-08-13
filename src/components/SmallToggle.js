@@ -2,7 +2,7 @@ import React from 'react'
 
 function SmallToggle({label}) {
   return (
-    <div className="flex justify-between w-full font-dm-sans">
+    <div className="flex justify-between items-center w-full font-dm-sans">
       <label className="switch">
         <input type="checkbox"/>
         <div className="slider"></div>

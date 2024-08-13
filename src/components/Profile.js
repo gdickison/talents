@@ -15,7 +15,7 @@ export default function Profile({gridrows}) {
       </style>
       <input id='profile-input' type="checkbox" className='hidden' />
       <label htmlFor="profile-input" className='flex items-center space-x-1 cursor-pointer px-3'>
-        <h3>Profile</h3>
+        <h4 className='font-marion'>Profile</h4>
         <img id='profile-form-arrow' src="/arrow_down.png" alt="open profile" className='h-6 w-6' />
       </label>
       <div id="profile-form-wrapper" >

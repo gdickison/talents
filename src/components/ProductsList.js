@@ -47,9 +47,9 @@ const products = [
 export default function ProductsList () {
   return (
     <div className="">
-      <h3 className="text-left px-3">Products</h3>
+      <h4 className="text-left px-3 font-marion">Products</h4>
       <div className="font-dm-sans">
-        <p className="py-3">Click a product for details.</p>
+        <p className="px-3 text-base">Click a product for details.</p>
         <ul role="list" className="px-5 m-1 flex gap-6 py-5 overflow-auto whitespace-nowrap">
           {products.map((product, i) => (
             <li key={i} className="flex justify-between bg-t-med-brown rounded-2xl">

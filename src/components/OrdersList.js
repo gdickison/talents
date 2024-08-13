@@ -72,12 +72,14 @@ export default function OrdersList () {
 
   return (
     <div className="font-marion text-white">
-      <h3 className="text-left px-3">Orders</h3>
+      <h4 className="text-left px-3">Orders</h4>
       <div className="font-dm-sans">
         <p className="p-3 text-base">Click an order for details.</p>
         <div className="">
-          <p className="text-left px-3 text-sm">Filter by Year / Month</p>
-          <Filters/>
+          <p className="text-left px-3 text-sm">Filter by Year / Month / Status</p>
+          <Filters
+            extraFilter={'status'}
+          />
         </div>
         <ul role="list" className="p-2 m-1 bg-t-med-brown rounded-md space-y-3">
           <div className="space-y-0">
@@ -86,7 +88,7 @@ export default function OrdersList () {
           </div>
           {orders.map((order, i) => {
             return (
-              <li key={i} className="grid gap-x-2 grid-rows-2 grid-flow-col bg-t-brown p-2 rounded-lg border border-t-orange" style={{gridTemplateColumns: '5rem 1fr'}}>
+              <li key={i} className="grid gap-x-2 grid-rows-2 grid-flow-col p-2 rounded-lg border border-t-orange" style={{gridTemplateColumns: '5rem 1fr'}}>
                   <div className="row-span-2 w-20 h-20 justify-self-center self-center flex justify-center items-center">
                     <img alt="" src={order.imageUrl} className="h-16 w-16 bg-gray-800 " />
                   </div>
@@ -127,7 +129,7 @@ export default function OrdersList () {
             )
           })}
           <div className="flex justify-center">
-            <button type="button" clasNames="w-1/2 rounded-md  px-3 py-2 mx-auto text-sm font-semibold text-white shadow-sm border border-t-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-t-light-blue">Show More</button>
+            <button type="button" className="w-1/2 rounded-md px-3 py-2 mx-auto text-sm font-semibold text-white border border-t-gold">Show More</button>
           </div>
         </ul>
       </div>

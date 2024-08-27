@@ -22,6 +22,9 @@ module.exports = {
         't-orange': '#E5AF44',
         't-gray': '#B5B7B9',
         't-light-blue': '#0094FF'
+      },
+      screens: {
+        'sm+': '680px'
       }
     },
   },

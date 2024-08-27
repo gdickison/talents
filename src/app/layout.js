@@ -1,6 +1,7 @@
 import { Marcellus_SC, DM_Sans } from "next/font/google";
 import Marion from 'next/font/local'
 import "./globals.css";
+import SidebarNav from "@/components/SidebarNav";
 
 const marcellus_sc = Marcellus_SC({
   subsets: ["latin"],
@@ -31,7 +32,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="bg-gray-900 h-full">
-      <body className={`h-full ${marcellus_sc.variable} ${dm_sans.variable} ${marion.variable}`}>{children}</body>
+      <body className={`h-full ${marcellus_sc.variable} ${dm_sans.variable} ${marion.variable}`}>
+        <SidebarNav/>
+        <div className="ml-16 sm+:ml-64">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

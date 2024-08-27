@@ -71,7 +71,7 @@ export default function OrdersList () {
   }
 
   return (
-    <div className="font-marion text-white">
+    <div className="font-marion text-white bg-t-med-brown">
       <h4 className="text-left px-3">Orders</h4>
       <div className="font-dm-sans">
         <p className="p-3 text-base">Click an order for details.</p>
@@ -81,7 +81,7 @@ export default function OrdersList () {
             extraFilter={'status'}
           />
         </div>
-        <ul role="list" className="p-2 m-1 bg-t-med-brown rounded-md space-y-3">
+        <ul role="list" className="p-2 m-1 rounded-md space-y-3">
           <div className="space-y-0">
             <p className="text-xs text-center italic">Item - Order Date</p>
             <p className="text-xs text-center italic">Order Status - Elapsed Time</p>

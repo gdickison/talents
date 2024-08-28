@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 async function Product4 ({ params }) {
   const data = await fetch(`https://dummyjson.com/products/${params.id}`)
   const product = await data.json()
@@ -44,6 +45,11 @@ async function Product4 ({ params }) {
                   </svg>
                 </div>
                 <p className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 font-normal text-base leading-4 hover:underline hover:duration-100 cursor-pointer">{product.reviews.length} reviews</p>
+              </div>
+              <div className="w-full mt-7 bg-transparent">
+                <div className="bg-gray-800" >
+                  <img src={product.thumbnail} alt={product.title} className="w-full bg-transparent" />
+                </div>
               </div>
               <p className="font-dm-sans font-normal text-base leading-6  mt-7">{product.description}</p>
               <p className=" font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 mt-6 ">${product.price.toFixed(2)}</p>
@@ -92,9 +98,9 @@ async function Product4 ({ params }) {
 
             <div className=" w-full flex flex-row gap-4">
               <div className=" w-full grid grid-cols-1 gap-6">
-              {product.images.map((image) => {
+              {product.images.map((image, idx) => {
                 return (
-                  <div key={product.id} className=" w-full bg-gray-100 flex justify-center items-center" >
+                  <div key={idx} className=" w-full bg-gray-100 flex justify-center items-center" >
                     <img src={image} alt={product.title}  />
                   </div>
                 )
@@ -105,9 +111,9 @@ async function Product4 ({ params }) {
           <div className="mt-4">
             <h4>Reviews</h4>
             <div className=" flex flex-col gap-4">
-              {product.reviews.map(review => {
+              {product.reviews.map((review, idx) => {
                 return (
-                  <div key={review.date} className="font-medium text-base leading-4 w-full">
+                  <div key={idx} className="font-medium text-base leading-4 w-full">
                     <div className="flex justify-between ">
                       <p className="text-white text-base product-details-inner">{review.rating} stars</p>
                       <p className="text-white text-base product-details-inner">{review.comment}</p>

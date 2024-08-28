@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-async function Product4 ({ params }) {
+async function Product ({ params }) {
   const data = await fetch(`https://dummyjson.com/products/${params.id}`)
   const product = await data.json()
 console.log('product', product)
@@ -109,4 +109,4 @@ console.log('product', product)
   );
 };
 
-export default Product4;
+export default Product;

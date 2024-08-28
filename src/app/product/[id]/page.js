@@ -1,18 +1,7 @@
-'use client'
-import React, { useState } from "react";
-
-const Product4 = ({ params }) => {
-  const [count, setCount] = useState(0);
-
-  const addCount = () => {
-    setCount((prev) => prev + 1);
-  };
-
-  const minusCount = () => {
-    if (count > 0) {
-      setCount((prev) => prev - 1);
-    }
-  };
+async function Product4 ({ params }) {
+  const data = await fetch(`https://dummyjson.com/products/${params.id}`)
+  const product = await data.json()
+  console.log('product', product)
 
   return (
     <div className='flex flex-col items-center mt-12 relative w-[375px] mx-auto text-white bg-t-brown'>
@@ -20,7 +9,7 @@ const Product4 = ({ params }) => {
         <div className="2xl:container 2xl:mx-auto py-2 px-3">
           <div className="flex justify-center items-center flex-col gap-8">
             <div className="  w-full items-center">
-              <h2 className="font-marion lg:text-4xl text-3xl lg:leading-9 leading-7 mt-4">Premium Hammer No. {params.id}</h2>
+              <h2 className="font-marion lg:text-4xl text-3xl lg:leading-9 leading-7 mt-4">{product.title}</h2>
               <div className=" flex flex-row justify-between  mt-5">
                 <div className=" flex flex-row space-x-3">
                   <svg className=" cursor-pointer" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,30 +43,46 @@ const Product4 = ({ params }) => {
                     />
                   </svg>
                 </div>
-                <p className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 font-normal text-base leading-4 hover:underline hover:duration-100 cursor-pointer">22 reviews</p>
+                <p className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 font-normal text-base leading-4 hover:underline hover:duration-100 cursor-pointer">{product.reviews.length} reviews</p>
               </div>
-              <p className="font-dm-sans font-normal text-base leading-6  mt-7">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta ipsa temporibus, debitis aperiam illo odio iusto ducimus facilis dolorem? Veritatis illum quod aliquam maxime quia itaque facilis consequuntur architecto!</p>
-              <p className=" font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 mt-6 ">$ 55.00</p>
+              <p className="font-dm-sans font-normal text-base leading-6  mt-7">{product.description}</p>
+              <p className=" font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 mt-6 ">${product.price.toFixed(2)}</p>
               <div className="lg:mt-11 mt-10">
-                <div className="flex flex-row justify-between items-center">
-                  <p className=" font-medium text-base leading-4 ">Select quantity</p>
-                  <div className="flex h-10 items-center">
-                    <span onClick={minusCount} className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer border border-gray-300 border-r-0 w-7 h-full flex items-center justify-center pb-1">
-                      -
-                    </span>
-                    <input id="counter" aria-label="input" className="border border-gray-300 h-full text-center w-14 pb-1 bg-t-brown text-white pt-1" type="text" value={count} onChange={(e) => e.target.value} />
-                    <span onClick={addCount} className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer border border-gray-300 border-l-0 w-7 h-full flex items-center justify-center pb-1 pt-1">
-                      +
-                    </span>
+                <div className="">
+                  <div className="h-10 items-center">
+                    <label htmlFor="quantity" className="flex flex-row justify-between items-center w-full">
+                      <p className="text-base leading-4 ">Select quantity ({product.stock} in stock)</p>
+                      <select name="quantity" id="quantity" className="w-1/4 text-black px-2 text-md text-center">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                    </label>
                   </div>
                 </div>
                 <hr className=" bg-gray-200 w-full my-2" />
                 <div className=" flex flex-row justify-between items-center mt-4">
                   <details className="product-details font-medium text-base leading-4 w-full space-y-4">
-                  <summary>
-                    Dimensions
-                  </summary>
-                  <div className="text-white product-details-inner">Some stuff goes here</div>
+                    <summary>
+                      Product Details
+                    </summary>
+                    <div className="text-white">Width: {product.dimensions.width}&quot;</div>
+                    <div className="text-white">Depth: {product.dimensions.depth}&quot;</div>
+                    <div className="text-white">Height: {product.dimensions.height}&quot;</div>
+                    <div className="text-white">Weight: {product.weight} oz.</div>
+                    <div className="text-white">Minimum Order: {product.minimumOrderQuanity}</div>
+                    <div className="text-white capitalize">Category: {product.category}</div>
+                    <div className="text-white capitalize">{product.warrantyInformation}</div>
+                    <div className="text-white capitalize">{product.shippingInformation}</div>
+                    <div className="text-white capitalize">Return Policy: {product.returnPolicy}</div>
+                    <div className="text-white capitalize">Tags:
+                      {product.tags.map((tag, idx) => {
+                        return (
+                          <div key={idx} className="text-white capitalize">{tag}</div>
+                        )
+                      })}
+                    </div>
+                    <div className="text-white capitalize">SKU: {product.sku}</div>
                   </details>
                 </div>
                 <hr className=" bg-gray-200 w-full mt-4" />
@@ -86,65 +91,33 @@ const Product4 = ({ params }) => {
             </div>
 
             <div className=" w-full flex flex-row gap-4">
-              <div className=" w-full lg:w-8/12 bg-gray-100 flex justify-center items-center" >
-                <img src="/hammer_2.png" alt="Hammer"  />
-              </div>
-              <div className=" w-full lg:w-4/12 grid lg:grid-cols-1 sm:grid-cols-4 grid-cols-2 gap-6">
-                <div className="bg-gray-100 flex justify-center items-center py-4" >
-                  <img src="/hammer_2.png" alt="Hammer"  />
-                </div>
-                <div className="bg-gray-100 flex justify-center items-center py-4" >
-                  <img src="/hammer_2.png" alt="Hammer"  />
-                </div>
-                <div className="bg-gray-100 flex justify-center items-center py-4" >
-                  <img src="/hammer_2.png" alt="Hammer"  />
-                </div>
+              <div className=" w-full grid grid-cols-1 gap-6">
+              {product.images.map((image) => {
+                return (
+                  <div key={product.id} className=" w-full bg-gray-100 flex justify-center items-center" >
+                    <img src={image} alt={product.title}  />
+                  </div>
+                )
+              })}
               </div>
             </div>
           </div>
-          <div className="flex  justify-center items-center w-full">
-            <div className="w-full grid grid-cols-1 gap-y-12 mt-10">
-              <div>
-              <svg xmlns="http://www.w3.org/2000/svg" height="50" viewBox="0 -960 960 960" width="50" fill="#0094ff"><path d="M400-120q-17 0-28.5-11.5T360-160v-480H160q0-83 58.5-141.5T360-840h240v120l120-120h80v320h-80L600-640v480q0 17-11.5 28.5T560-120H400Zm40-80h80v-240h-80v240Zm0-320h80v-240H360q-26 0-49 10.5T271-720h169v200Zm40 40Z" strokeWidth="3.25"/></svg>
-                <p className="font-semibold text-xl leading-5 lg:mt-10 mt-9">Great for hammering</p>
-                <p className="font-dm-sans text-normal text-base leading-6  mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, neque! Excepturi deleniti amet suscipit non quaerat ad ipsa voluptatum similique, neque inventore quam modi illum in hic voluptatem eveniet dolores! </p>
-              </div>
-              <div>
-                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M20.833 6.66659C17.574 7.42209 14.5766 9.03575 12.1515 11.3402C9.72641 13.6447 7.96204 16.556 7.04139 19.7722C6.12073 22.9884 6.07733 26.3923 6.91568 29.6309C7.75403 32.8696 9.44359 35.8249 11.8091 38.1905C14.1747 40.556 17.13 42.2456 20.3686 43.0839C23.6073 43.9223 27.0112 43.8789 30.2274 42.9582C33.4436 42.0375 36.3549 40.2732 38.6594 37.8481C40.9638 35.423 42.5775 32.4255 43.333 29.1666C43.333 28.6141 43.1135 28.0842 42.7228 27.6935C42.3321 27.3028 41.8022 27.0833 41.2497 27.0833H33.333C32.9542 28.5395 32.1975 29.8699 31.1394 30.9397C30.0813 32.0095 28.7594 32.7809 27.3074 33.1757C25.8554 33.5705 24.3249 33.5747 22.8708 33.1879C21.4166 32.8011 20.0905 32.0371 19.0265 30.9731C17.9625 29.9091 17.1984 28.583 16.8117 27.1288C16.4249 25.6747 16.4291 24.1442 16.8239 22.6922C17.2187 21.2402 17.99 19.9183 19.0599 18.8602C20.1297 17.8021 21.4601 17.0453 22.9163 16.6666V8.33326C22.8904 8.08643 22.8158 7.84721 22.6968 7.62944C22.5777 7.41168 22.4166 7.21971 22.2229 7.06468C22.0291 6.90964 21.8064 6.79463 21.5678 6.72629C21.3293 6.65795 21.0795 6.63766 20.833 6.66659Z"
-                    stroke="#0094ff"
-                    strokeWidth="3.25"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path d="M31.25 7.29163C33.8953 8.22305 36.2979 9.736 38.2809 11.719C40.264 13.7021 41.7769 16.1047 42.7083 18.75H33.3333C32.6946 18.0019 31.998 17.3054 31.25 16.6666V7.29163Z" stroke="#0094ff" strokeWidth="3.25" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <p className="font-semibold text-xl leading-5 lg:mt-10 mt-9">Durable hardware</p>
-                <p className="font-dm-sans text-normal text-base leading-6  mt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod aliquid accusantium natus a veritatis eaque autem temporibus, dignissimos sint deleniti, fugit corrupti eius rem consequuntur aspernatur ad nostrum asperiores praesentium.</p>
-              </div>
-              <div>
-                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14.583 14.5834H35.4164V27.0834C35.4164 28.741 34.7579 30.3307 33.5858 31.5028C32.4137 32.6749 30.824 33.3334 29.1663 33.3334H20.833C19.1754 33.3334 17.5857 32.6749 16.4136 31.5028C15.2415 30.3307 14.583 28.741 14.583 27.0834V14.5834Z" stroke="#0094ff" strokeWidth="3.25" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M18.75 6.25V14.5833" stroke="#0094ff" strokeWidth="3.25" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M31.25 6.25V14.5833" stroke="#0094ff" strokeWidth="3.25" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M25 33.3334V37.5C25 38.6051 25.439 39.6649 26.2204 40.4463C27.0018 41.2277 28.0616 41.6667 29.1667 41.6667H35.4167" stroke="#0094ff" strokeWidth="3.25" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <p className="font-semibold text-xl leading-5 lg:mt-10 mt-9">Eco-friendly</p>
-                <p className="font-dm-sans text-normal text-base leading-6  mt-4"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem excepturi cum accusantium, tempora laboriosam a cumque voluptatem, consectetur vero sapiente iure sint! Omnis ipsum vitae nobis tempora recusandae fugit aperiam!</p>
-              </div>
-              <div>
-                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.667 16.6666H33.3337V33.3333H16.667V16.6666Z" stroke="#0094ff" strokeWidth="3.25" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M37.4997 8.33337H12.4997C10.1985 8.33337 8.33301 10.1989 8.33301 12.5V37.5C8.33301 39.8012 10.1985 41.6667 12.4997 41.6667H37.4997C39.8009 41.6667 41.6663 39.8012 41.6663 37.5V12.5C41.6663 10.1989 39.8009 8.33337 37.4997 8.33337Z" stroke="#0094ff" strokeWidth="3.25" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M33.333 33.3334L40.208 40.2084" stroke="#0094ff" strokeWidth="3.25" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M33.333 16.6666L40.208 9.79163" stroke="#0094ff" strokeWidth="3.25" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M16.667 16.6666L9.79199 9.79163" stroke="#0094ff" strokeWidth="3.25" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M16.667 33.3334L9.79199 40.2084" stroke="#0094ff" strokeWidth="3.25" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <p className="font-semibold text-xl leading-5 lg:mt-10 mt-9">Minimal Design</p>
-                <p className="font-dm-sans text-normal text-base leading-6  mt-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem ducimus maxime quo optio at, aperiam veritatis a in ut laboriosam obcaecati omnis cum repudiandae nobis, eos tenetur, ab accusamus? Quo!</p>
-              </div>
+          <div className="mt-4">
+            <h4>Reviews</h4>
+            <div className=" flex flex-col gap-4">
+              {product.reviews.map(review => {
+                return (
+                  <div key={review.date} className="font-medium text-base leading-4 w-full">
+                    <div className="flex justify-between ">
+                      <p className="text-white text-base product-details-inner">{review.rating} stars</p>
+                      <p className="text-white text-base product-details-inner">{review.comment}</p>
+                    </div>
+                    <div className="">
+                      <p className="text-white text-base product-details-inner text-right italic">{review.reviewerName}</p>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>

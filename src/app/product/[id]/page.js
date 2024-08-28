@@ -2,7 +2,7 @@
 async function Product4 ({ params }) {
   const data = await fetch(`https://dummyjson.com/products/${params.id}`)
   const product = await data.json()
-
+console.log('product', product)
   return (
     <div className='flex flex-col items-center mt-12 relative w-[375px] mx-auto text-white bg-t-brown font-dm-sans'>
       <div className="text-white font-normal">

@@ -18,7 +18,6 @@ export default async function ProductsList () {
                   <p className="text-left text-sm capitalize h-4">{product.category}</p>
                   <img alt="" src={product.thumbnail} className="h-52 w-52 flex-none bg-gray-800 mx-auto" />
                   <h3 className="text-base font-marion text-wrap text-left min-h-20">{product.title}</h3>
-                  <p className="text-t-light-blue text-left tracking-wide text-base">Rating: {product.rating.toFixed(1)} ({product.reviews.length} reviews)</p>
                   <p className="text-left">${product.price.toFixed(2)}</p>
                 </div>
               </Link>

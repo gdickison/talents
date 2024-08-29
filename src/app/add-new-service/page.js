@@ -62,6 +62,14 @@ async function AddNewService() {
             </div>
           </label>
         </div>
+        <div>
+          <label for="serviceDetails" className="block text-sm font-medium leading-6">
+            Additional Service Details
+            <div className="mt-2">
+              <textarea rows={5} name="serviceDetails" id="description" className="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Describe your electric dog polishing service"/>
+            </div>
+          </label>
+        </div>
         <div className="block text-sm font-medium leading-6">
           Primary Image
           <div className="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10 bg-gray-100">

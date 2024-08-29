@@ -2,6 +2,7 @@
 import AccountBalance from "@/components/AccountBalance"
 import OrdersList from "@/components/OrdersList"
 import ProductsList from "@/components/ProductsList"
+import ServicesList from "@/components/ServicesList"
 import Profile from "@/components/Profile"
 import ToggleSwitch from "@/components/ToggleSwitch"
 import Link from "next/link"
@@ -39,8 +40,7 @@ function BusinessLandingScreen() {
                 </div>
               </div>
               <div className="text-center text-white text-[23px] font-normal">
-                <h1 className="text-3xl text-left px-2 my-2 font-marion">Services List</h1>
-                <p>(Coming Soon)</p>
+                <ServicesList/>
                 <div className="flex justify-center">
                   <Link href={'/add-new-service'} className="w-1/2 rounded-md px-3 py-2 mx-auto text-sm font-semibold text-white border border-t-gold">Add New Service</Link>
                 </div>

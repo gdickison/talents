@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-async function Product4 ({ params }) {
+async function Product ({ params }) {
   const data = await fetch(`https://dummyjson.com/products/${params.id}`)
   const product = await data.json()
-console.log('product', product)
+
   return (
     <div className='flex flex-col items-center mt-12 relative w-[375px] mx-auto text-white bg-t-brown font-dm-sans'>
       <div className="text-white font-normal">
@@ -10,16 +10,6 @@ console.log('product', product)
           <div className="flex justify-center items-center flex-col gap-8">
             <div className="w-full items-center">
               <h2 className="font-dm-sans text-3xl leading-9 mt-4">{product.title}</h2>
-              <div className=" flex flex-row justify-between  mt-5">
-                <div className=" flex flex-row space-x-3">
-                  <img src="/star_bright.svg" alt="star" />
-                  <img src="/star_bright.svg" alt="star" />
-                  <img src="/star_bright.svg" alt="star" />
-                  <img src="/star_bright.svg" alt="star" />
-                  <img src="/star_dark.svg" alt="no star" />
-                </div>
-                <p className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 font-normal text-base leading-4 hover:underline hover:duration-100 cursor-pointer">{product.reviews.length} reviews</p>
-              </div>
               <div className="w-full mt-7 bg-transparent">
                 <div className="bg-gray-800" >
                   <img src={product.thumbnail} alt={product.title} className="w-full bg-transparent" />
@@ -85,28 +75,10 @@ console.log('product', product)
               </div>
             </div>
           </div>
-          <div className="mt-4">
-            <h4>Reviews</h4>
-            <div className=" flex flex-col gap-4 mt-2">
-              {product.reviews.map((review, idx) => {
-                return (
-                  <div key={idx} className="font-medium text-base leading-4 w-full">
-                    <div className="flex justify-between ">
-                      <p className="text-white text-base product-details-inner">{review.rating} stars</p>
-                      <p className="text-white text-base product-details-inner">{review.comment}</p>
-                    </div>
-                    <div className="">
-                      <p className="text-white text-sm product-details-inner text-right italic">{review.reviewerName}</p>
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Product4;
+export default Product;

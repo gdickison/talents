@@ -4,7 +4,7 @@ function SidebarNav() {
 
   return (
     <div className="sidenav">
-      <button className="sidenav__button">Menu</button>
+      {/* <button className="sidenav__button">Menu</button> */}
       <div className="sidenav__links">
         <Link href={'/'}>Home</Link>
         <Link href={'/design-system'}>Design System</Link>
@@ -16,7 +16,9 @@ function SidebarNav() {
         <Link href={'/order-list'}>Orders List Component</Link>
         <Link href={'/product-list'}>Product List Component</Link>
         <Link href={'/service-list'}>Service List Component</Link>
+        <Link href={'/pre-release-landing'}>Pre-Release Landing Page</Link>
         <Link href={'/business-waiting-list'}>Business Waiting List</Link>
+        <Link href={'/customer-waiting-list'}>Customer Waiting List</Link>
       </div>
     </div>
   )

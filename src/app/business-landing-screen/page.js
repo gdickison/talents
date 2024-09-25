@@ -9,7 +9,7 @@ import Link from "next/link"
 
 function BusinessLandingScreen() {
   return (
-    <div className="flex flex-col items-center -m-5 relative font-dm-sans">
+    <div className="flex flex-col items-center -m-5 relative font-dm-sans mt-24">
       <div className="py-4 flex justify-center fixed top-[575px]">
         <ToggleSwitch/>
       </div>

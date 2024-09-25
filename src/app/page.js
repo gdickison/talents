@@ -5,7 +5,7 @@ import Profile from "@/components/Profile"
 
 function Home() {
   return (
-    <div className="flex flex-col gap-12">
+    <div className="flex flex-col gap-12 mt-24">
       <div className="flex gap-12 text-white overflow-auto">
         <div className="w-96 min-w-96">
           <AccountBalance/>

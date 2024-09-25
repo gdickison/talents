@@ -1,0 +1,91 @@
+:root {
+  /** CSS PRIMARY COLORS */
+
+  --clr-primary-a0:  #e5af44;
+  --clr-primary-a10:  #b38938;
+  --clr-primary-a20:  #83652c;
+  --clr-primary-a30:  #574321;
+  --clr-primary-a40:  #2d2415;
+  /** CSS ACCENT COLORS */
+
+  --clr-accent-a0:  #447ae5;
+  --clr-accent-a10:  #3a61b3;
+  --clr-accent-a20:  #304883;
+  --clr-accent-a30:  #243156;
+  --clr-accent-a40:  #171c2d;
+  /** CSS SEMANTIC COLORS */
+
+  --clr-Danger-a0:  #b41c2b;
+  --clr-Success-a0:  #009f42;
+  --clr-Warning-a0:  #cc8800;
+  --clr-Info-a0:  #388cfa;
+  /** CSS NEUTRAL COLORS */
+
+  --clr-neutral-a0:  #ffffff;
+  --clr-neutral-a10:  #c6c6c6;
+  --clr-neutral-a20:  #919191;
+  --clr-neutral-a30:  #5e5e5e;
+  --clr-neutral-a40:  #303030;
+  --clr-neutral-a50:  #000000;
+  /** EXAMPLES */
+  color: var(--clr-primary-a0);
+  background-color: var(--clr-primary-a40);
+
+  /* DARK THEME COLORS */
+  /** CSS DARK THEME PRIMARY COLORS */
+  --color-primary-100:  #e5af44;
+  --color-primary-200:  #eab85a;
+  --color-primary-300:  #eec06f;
+  --color-primary-400:  #f2c984;
+  --color-primary-500:  #f5d298;
+  --color-primary-600:  #f8dbac;
+ 
+  /** CSS DARK THEME SURFACE COLORS */
+  --color-surface-100:  #402e32;
+  --color-surface-200:  #534246;
+  --color-surface-300:  #67575a;
+  --color-surface-400:  #7b6d70;
+  --color-surface-500:  #908486;
+  --color-surface-600:  #a59b9d;
+ 
+  /** CSS DARK THEME MIXED SURFACE COLORS */
+  --color-surface-mixed-100:  #4f3935;
+  --color-surface-mixed-200:  #614c49;
+  --color-surface-mixed-300:  #74615d;
+  --color-surface-mixed-400:  #867572;
+  --color-surface-mixed-500:  #9a8b88;
+  --color-surface-mixed-600:  #ada19f;
+
+  /* DARK THEME 10-COLORS */
+  --color-dark-background: #121212;
+  --color-dark-text: #faf7ec;
+  --color-dark-100: #f8ebc2;
+  --color-dark-200: #f3db97;
+  --color-dark-300: #dcb966;
+  --color-dark-500: #9c7933;
+  --color-dark-600: #725a2a;
+  --color-dark-400: #c6983d;
+  --color-dark-700: #534322;
+  --color-dark-800: #3f321b;
+  --color-dark-900: #282116;
+
+  /* LIGHT THEME 10-COLORS */
+  --color-light-text: #121212;
+  --color-light-background: #faf7ec;
+  --color-light-100: #fffcf0;
+  --color-light-200: #fff2c7;
+  --color-light-300: #ffe59e;
+  --color-light-400: #f2cb6f;
+  --color-light-500: #e5af44;
+  --color-light-600: #bf8b30;
+  --color-light-700: #99681f;
+  --color-light-800: #734811;
+  --color-light-900: #4d2e0b;
+
+
+  /* FOUR COLOR DARK MODE */
+  --four-color-dark-300: #E5E5CB;
+  --four-color-dark-500: #D5CEA3;
+  --four-color-dark-700: #3C2A21;
+  --four-color-dark-900: #1A120B;
+}

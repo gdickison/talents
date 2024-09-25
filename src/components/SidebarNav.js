@@ -16,6 +16,7 @@ function SidebarNav() {
         <Link href={'/order-list'}>Orders List Component</Link>
         <Link href={'/product-list'}>Product List Component</Link>
         <Link href={'/service-list'}>Service List Component</Link>
+        <Link href={'/business-waiting-list'}>Business Waiting List</Link>
       </div>
     </div>
   )

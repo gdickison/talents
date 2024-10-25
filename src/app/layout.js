@@ -3,23 +3,20 @@ import Marion from 'next/font/local'
 import "./globals.css";
 import SidebarNav from "@/components/SidebarNav";
 
-const marcellus_sc = Marcellus_SC({
+export const marcellus = Marcellus_SC({
   subsets: ["latin"],
-  variable: '--font-marcellus-sc',
   display: 'swap',
   weight: '400'
 });
 
-const dm_sans = DM_Sans({
+export const dm = DM_Sans({
   subsets: ["latin"],
-  variable: '--font-dm-sans',
   display: 'swap'
 });
 
-const marion = Marion({
+export const marion = Marion({
   src: '../../marion-regular.ttf',
   subsets: ["latin"],
-  variable: '--font-marion',
   display: 'swap'
 })
 
@@ -32,7 +29,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="bg-gray-900 h-full">
-      <body className={`h-full ${marcellus_sc.variable} ${dm_sans.variable} ${marion.variable}`}>
+      <body className={`h-full ${marcellus.variable} ${dm.variable} ${marion.variable}`}>
         <SidebarNav/>
         <div className="ml-16 sm+:ml-64">
           {children}

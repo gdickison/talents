@@ -1,15 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link"
+import { marcellus } from "../layout"
 
 function PreReleaseLandingPage() {
   return (
     <section
-      id="relume"
+      
       class="grid grid-cols-1 gap-y-16 pt-16 md:grid-flow-row md:pt-24 lg:grid-flow-col lg:grid-cols-2 lg:items-center lg:pt-0 bg-tbg"
     >
       <div class="mx-[5%] max-w-[40rem] justify-self-start lg:ml-[5vw] lg:mr-20 lg:justify-self-end">
         <p class="text-3xl font-dm-sans text-gray-300">Welcome to</p>
-        <h1 class="mb-5 text-6xl md:mb-6 md:text-9xl lg:text-10xl text-ttext font-marcellus text-[#BF8B30]">
+        <h1 class={`mb-5 text-6xl md:mb-6 md:text-9xl lg:text-10xl text-ttext ${marcellus.className} text-[#BF8B30]`}>
           Talents
         </h1>
         <p class="md:text-xl font-dm-sans text-gray-300">
@@ -20,13 +21,13 @@ function PreReleaseLandingPage() {
             href="/business-waiting-list"
             className="mt-6 flex gap-x-4 md:mt-8 focus-visible:ring-border-primary gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary bg-background-alternative text-text-alternative px-6 py-3 text-[#BF8B30] hover:text-black border-[#BF8B30] rounded-md hover:bg-[#BF8B30]"
           >
-            Get Started
+            I&apos;m a Seller
         </Link>
           <Link
             href="/customer-waiting-list"
             className="mt-6 flex gap-x-4 md:mt-8 focus-visible:ring-border-primary gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary bg-background-alternative text-text-alternative px-6 py-3 text-[#BF8B30] hover:text-black border-[#BF8B30] rounded-md hover:bg-[#BF8B30]"
           >
-            Get Started
+            I&apos;m a Buyer
         </Link>
         </div>
       </div>
@@ -39,7 +40,7 @@ function PreReleaseLandingPage() {
               <div class="relative w-full pt-[120%]">
                 <img
                   class="absolute inset-0 size-full object-cover"
-                  src="https://picsum.photos/id/0/390/467"
+                  src="https://picsum.photos/id/73/390/467"
                   alt="placeholder image 1"
                 />
               </div>
@@ -57,7 +58,7 @@ function PreReleaseLandingPage() {
               <div class="relative w-full pt-[120%]">
                 <img
                   class="absolute inset-0 size-full object-cover"
-                  src="https://picsum.photos/id/21/390/467"
+                  src="https://picsum.photos/id/325/390/467"
                   alt="placeholder image 3"
                 />
               </div>
@@ -75,7 +76,7 @@ function PreReleaseLandingPage() {
               <div class="relative w-full pt-[120%]">
                 <img
                   class="absolute inset-0 size-full object-cover"
-                  src="https://picsum.photos/id/24/390/467"
+                  src="https://picsum.photos/id/200/390/467"
                   alt="placeholder image 5"
                 />
               </div>
@@ -113,7 +114,7 @@ function PreReleaseLandingPage() {
               <div class="relative w-full pt-[120%]">
                 <img
                   class="absolute inset-0 size-full object-cover"
-                  src="https://picsum.photos/id/73/390/467"
+                  src="https://picsum.photos/id/225/390/467"
                   alt="placeholder image 3"
                 />
               </div>
@@ -122,7 +123,7 @@ function PreReleaseLandingPage() {
               <div class="relative w-full pt-[120%]">
                 <img
                   class="absolute inset-0 size-full object-cover"
-                  src="https://picsum.photos/id/111/390/467"
+                  src="https://picsum.photos/id/425/390/467"
                   alt="placeholder image 4"
                 />
               </div>

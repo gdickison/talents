@@ -1,8 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
+import { marcellus } from "../layout"
 
 async function BusinessWaitingList() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28 bg-black text-white h-screen">
+    <section  className="px-[5%] py-16 md:py-24 lg:py-28 bg-black text-white h-screen">
       <div
         className="container grid grid-cols-1 items-start gap-y-12 md:grid-flow-row md:grid-cols-2 md:gap-x-12 lg:grid-flow-col lg:gap-x-20 lg:gap-y-16 mx-auto"
       >
@@ -10,10 +11,10 @@ async function BusinessWaitingList() {
           <div className="rb-6 mb-6 md:mb-8">
             <div className="flex items-center gap-x-2 py-8">
               <img src="/gold-icon.svg" className="h-20 w-20 text-ttext" alt="logo"/>
-              <h2 className="rb-5 text-6xl font-marcellus text-[#BF8B30]">Join the Wait List</h2>
+              <h2 className={`rb-5 text-6xl ${marcellus.className} text-[#BF8B30]`}>Join the Wait List</h2>
             </div>
             <p className="md:text-md font-dm-sans text-gray-300 py-8">Talents is a platform that connects consumers with product and service providers that share the same values. The service is still in development, and we will let you know when it&apos;s ready.</p>
-            <section id="relume" class="px-[5%] py-8">
+            <section  class="px-[5%] py-8">
               <div class="container">
                 <div class="mx-auto mb-12 max-w-lg text-center md:mb-18 lg:mb-20">
                   <h2 class="rb-5 mb-5 text-5xl font-semibold text-[#BF8B30] md:mb-6 font-marcellus tracking-wide">Pricing plan</h2>
@@ -52,7 +53,7 @@ async function BusinessWaitingList() {
                               ></path>
                             </svg>
                           </div>
-                          <p>Feature text goes here</p>
+                          <p>Unlimited Products / Services</p>
                         </div>
                         <div class="flex self-start">
                           <div class="mr-4 flex-none self-start">
@@ -71,7 +72,7 @@ async function BusinessWaitingList() {
                               ></path>
                             </svg>
                           </div>
-                          <p>Feature text goes here</p>
+                          <p>No Sales Commissions</p>
                         </div>
                         <div class="flex self-start">
                           <div class="mr-4 flex-none self-start">

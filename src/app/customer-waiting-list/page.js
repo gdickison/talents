@@ -11,7 +11,7 @@ async function BusinessWaitingList() {
           <div className="rb-6 mb-6 md:mb-8">
             <div className="flex items-center gap-x-2 py-8">
               <img src="/gold-icon.svg" className="h-20 w-20 text-ttext" alt="logo"/>
-              <h2 className={`rb-5 text-6xl ${marcellus.className} text-[#BF8B30]`}>Join the Wait List</h2>
+              <h2 className="rb-5 text-6xl font-marcellus text-[#BF8B30]">Join the Wait List</h2>
             </div>
             <p className="md:text-md font-dm-sans text-gray-300 py-8">Talents is a platform that connects consumers with product and service providers that share the same values. The service is still in development, and we will let you know when it&apos;s ready.</p>
           </div>

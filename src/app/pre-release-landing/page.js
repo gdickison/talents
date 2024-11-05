@@ -10,7 +10,7 @@ function PreReleaseLandingPage() {
     >
       <div class="mx-[5%] max-w-[40rem] justify-self-start lg:ml-[5vw] lg:mr-20 lg:justify-self-end">
         <p class="text-3xl font-dm-sans text-gray-300">Welcome to</p>
-        <h1 class={`mb-5 text-6xl md:mb-6 md:text-9xl lg:text-10xl text-ttext ${marcellus.className} text-[#BF8B30]`}>
+        <h1 class="mb-5 text-6xl md:mb-6 md:text-9xl lg:text-10xl text-ttext font-marcellus text-[#BF8B30]">
           Talents
         </h1>
         <p class="md:text-xl font-dm-sans text-gray-300">

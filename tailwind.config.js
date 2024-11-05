@@ -8,9 +8,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        marcellus: ['var(--font-marcellus-sc)'],
-        'dm-sans': ['var(--font-dm-sans)'],
-        marion: ['var(--font-marion)']
+        marcellus: ['var(--font-marcellus)'],
+        dm: ['var(--font-dm)'],
+        marion: ['var(--font-marion)'],
+        montserrat: ['var(--font-montserrat)']
       },
       colors: {
         't-gold': '#FFE06B',

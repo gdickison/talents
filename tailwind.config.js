@@ -14,6 +14,7 @@ module.exports = {
         montserrat: ['var(--font-montserrat)']
       },
       colors: {
+        't-text': '#BF8B30',
         't-gold': '#FFE06B',
         't-light-brown': '#7D5123',
         't-med-brown': '#333333',

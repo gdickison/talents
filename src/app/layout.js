@@ -1,25 +1,33 @@
-import { Marcellus_SC, DM_Sans } from "next/font/google";
+import { Marcellus_SC, DM_Sans, Montserrat } from "next/font/google";
 import Marion from 'next/font/local'
 import "./globals.css";
 import SidebarNav from "@/components/SidebarNav";
 
-export const marcellus = Marcellus_SC({
+const marcellus = Marcellus_SC({
   subsets: ["latin"],
   display: 'swap',
-  weight: '400'
+  weight: '400',
+  variable: '--font-marcellus'
 });
 
-export const dm = DM_Sans({
+const dm = DM_Sans({
   subsets: ["latin"],
-  display: 'swap'
+  display: 'swap',
+  variable: '--font-dm'
 });
 
-export const marion = Marion({
+const marion = Marion({
   src: '../../marion-regular.ttf',
   subsets: ["latin"],
-  display: 'swap'
+  display: 'swap',
+  variable: '--font-marion'
 })
 
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: 'swap',
+  variable: '--font-montserrat'
+})
 
 export const metadata = {
   title: "Talents",
@@ -28,10 +36,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="bg-gray-900 h-full">
-      <body className={`h-full ${marcellus.variable} ${dm.variable} ${marion.variable}`}>
+    <html lang="en" className="bg-[#252525] h-full">
+      <body className={`h-full ${marcellus.variable} ${dm.variable} ${marion.variable} ${montserrat.variable}`}>
         <SidebarNav/>
-        <div className="ml-16 sm+:ml-64">
+        <div className="lg:ml-16 sm+:ml-64">
           {children}
         </div>
       </body>

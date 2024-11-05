@@ -13,7 +13,7 @@ const SignUp = () => {
           </div>
           <form className="grid grid-cols-1 gap-6">
             <div className="grid grid-cols-1">
-              <label className="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 mb-2 font-montserrat text-[#BF8B30]" for="name">
+              <label className="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 mb-2 font-montserrat text-[#BF8B30]" htmlFor="name">
                 Name*
               </label>
               <div className="relative flex size-full items-center">
@@ -26,7 +26,7 @@ const SignUp = () => {
               </div>
             </div>
             <div className="grid grid-cols-1">
-              <label className="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 mb-2 font-montserrat text-[#BF8B30]" for="email">
+              <label className="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 mb-2 font-montserrat text-[#BF8B30]" htmlFor="email">
                 Email*
               </label>
               <div className="relative flex size-full items-center">
@@ -41,7 +41,7 @@ const SignUp = () => {
             <div className="grid grid-cols-1">
               <label
                 className="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 mb-2 font-montserrat text-[#BF8B30]"
-                for="password"
+                htmlFor="password"
               >
                 Password*
               </label>
@@ -62,7 +62,7 @@ const SignUp = () => {
                 <svg
                   stroke="currentColor"
                   fill="currentColor"
-                  stroke-width="0"
+                  strokeWidth="0"
                   viewBox="0 0 24 24"
                   className="size-6"
                   height="1em"

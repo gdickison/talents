@@ -11,7 +11,7 @@ function SmallToggle({label}) {
           <div className="slider-card-face slider-card-back"></div>
         </div>
       </label>
-      <p className='text-t-text text-xl'>{label}</p>
+      <p className='text-t-umber text-xl'>{label}</p>
     </div>
   )
 }

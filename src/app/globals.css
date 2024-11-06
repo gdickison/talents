@@ -196,25 +196,65 @@ p, .p {
 
 /* END TOGGLE SWITCH */
 
-/* PROFILE FORM TRANSITION */
+/* PLAID FORM TRANSITION */
 
-#profile-input:checked ~ #profile-form-wrapper {
+#plaid-input:checked ~ #plaid-form-wrapper {
   grid-template-rows: 1fr;
 }
 
-#profile-form-arrow {
+#plaid-form-arrow {
   transition: transform 0.5s ease-in-out;
 }
 
-#profile-input:checked ~ label > #profile-form-arrow {
+#plaid-input:checked ~ label > #plaid-form-arrow {
   transform: rotate(-90deg);
 }
 
-#profile-form {
+#plaid-form {
   overflow: hidden;
 }
 
-/* END PROFILE FORM TRANSITION */
+/* END PLAID FORM TRANSITION */
+
+/* PERSONAL FORM TRANSITION */
+
+#personal-input:checked ~ #personal-form-wrapper {
+  grid-template-rows: 1fr;
+}
+
+#personal-form-arrow {
+  transition: transform 0.5s ease-in-out;
+}
+
+#personal-input:checked ~ label > #personal-form-arrow {
+  transform: rotate(-90deg);
+}
+
+#personal-form {
+  overflow: hidden;
+}
+
+/* END PERSONAL FORM TRANSITION */
+
+/* BUSINESS FORM TRANSITION */
+
+#business-input:checked ~ #business-form-wrapper {
+  grid-template-rows: 1fr;
+}
+
+#business-form-arrow {
+  transition: transform 0.5s ease-in-out;
+}
+
+#business-input:checked ~ label > #business-form-arrow {
+  transform: rotate(-90deg);
+}
+
+#business-form {
+  overflow: hidden;
+}
+
+/* END BUSINESS FORM TRANSITION */
 
 /* SMALL TOGGLE */
 

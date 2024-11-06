@@ -216,6 +216,26 @@ p, .p {
 
 /* END PROFILE FORM TRANSITION */
 
+/* PLAID FORM TRANSITION */
+
+#plaid-input:checked ~ #plaid-form-wrapper {
+  grid-template-rows: 1fr;
+}
+
+#plaid-form-arrow {
+  transition: transform 0.5s ease-in-out;
+}
+
+#plaid-input:checked ~ label > #plaid-form-arrow {
+  transform: rotate(-90deg);
+}
+
+#plaid-form {
+  overflow: hidden;
+}
+
+/* END PROFILE FORM TRANSITION */
+
 /* SMALL TOGGLE */
 
 /* From Uiverse.io by AbanoubMagdy1 */

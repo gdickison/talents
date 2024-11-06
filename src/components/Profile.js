@@ -62,7 +62,7 @@ export default function Profile({gridrows}) {
                     <UserCircleIcon aria-hidden="true" className="h-12 w-12 text-t-tan" />
                     <button
                       type="button"
-                      className="w-3/4 rounded-md focus-visible:ring-border-primary gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary bg-background-alternative text-text-alternative p-2 text-[#BF8B30] hover:text-black border-[#BF8B30] hover:bg-[#BF8B30]"
+                      className="w-3/4 rounded-md focus-visible:ring-border-primary gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary bg-background-alternative font-montserrat text-[1rem] p-2 text-[#BF8B30] hover:text-black border-[#BF8B30] hover:bg-[#BF8B30]"
                     >
                       Change
                     </button>
@@ -93,49 +93,65 @@ export default function Profile({gridrows}) {
               </div>
             </div>
 
+            {/* PLAID ACCOUNT INPUTS */}
             <div className="border-b border-gray-50/10 pb-12">
-              <h2 className="block text-[1.15rem] font-medium leading-6 text-t-text font-montserrat">Plaid Account Information</h2>
+              {/* <h2 className="block text-[1.15rem] font-medium leading-6 text-t-text font-montserrat">Plaid Account Information</h2> */}
+              <style>
+                {`#plaid-form-wrapper {
+                    display: grid;
+                    grid-template-rows: ${gridrows || 0}fr;
+                    transition: grid-template-rows 0.5s ease-out;
+                }`}
+              </style>
+              <input id='plaid-input' type="checkbox" className='hidden' />
+              <label htmlFor="plaid-input" className='flex items-center space-x-1 cursor-pointer'>
+                <h4 className='block text-2xl leading-6 text-t-text font-marion'>Plaid Account Information</h4>
+                <img id='plaid-form-arrow' src="/arrow_down.png" alt="open plaid form" className='h-6 w-6' />
+              </label>
+              <div id="plaid-form-wrapper">
+                <div id="plaid-form">
+                  <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8">
+                    <div className="">
+                      <label htmlFor="first-name" className="block text-[1rem] font-medium leading-6 text-t-text font-montserrat">
+                        Plaid Username
+                      </label>
+                      <div className="mt-2">
+                        <input
+                          id="first-name"
+                          name="first-name"
+                          type="text"
+                          className="block w-full rounded-md border-0 p-2 text-gray-50 shadow-sm text-base placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
+                        />
+                      </div>
+                    </div>
 
-              <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8">
-                <div className="">
-                  <label htmlFor="first-name" className="block text-[1rem] font-medium leading-6 text-t-text font-montserrat">
-                    Plaid Username
-                  </label>
-                  <div className="mt-2">
-                    <input
-                      id="first-name"
-                      name="first-name"
-                      type="text"
-                      className="block w-full rounded-md border-0 p-2 text-gray-50 shadow-sm text-base placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
-                    />
-                  </div>
-                </div>
+                    <div className="">
+                      <label htmlFor="last-name" className="block text-[1rem] font-medium leading-6 text-t-text font-montserrat">
+                        Plaid account connection
+                      </label>
+                      <div className="mt-2">
+                        <input
+                          id="last-name"
+                          name="last-name"
+                          type="text"
+                          className="block w-full rounded-md border-0 p-2 text-gray-50 shadow-sm text-base placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
+                        />
+                      </div>
+                    </div>
 
-                <div className="">
-                  <label htmlFor="last-name" className="block text-[1rem] font-medium leading-6 text-t-text font-montserrat">
-                    Plaid account connection
-                  </label>
-                  <div className="mt-2">
-                    <input
-                      id="last-name"
-                      name="last-name"
-                      type="text"
-                      className="block w-full rounded-md border-0 p-2 text-gray-50 shadow-sm text-base placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
-                    />
-                  </div>
-                </div>
-
-                <div className="">
-                  <label htmlFor="email" className="block text-[1rem] font-medium leading-6 text-t-text font-montserrat">
-                    [Whatever else Plaid needs]
-                  </label>
-                  <div className="mt-2">
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      className="block w-full rounded-md border-0 p-2 text-gray-50 shadow-sm text-base placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
-                    />
+                    <div className="">
+                      <label htmlFor="email" className="block text-[1rem] font-medium leading-6 text-t-text font-montserrat">
+                        [Whatever else Plaid needs]
+                      </label>
+                      <div className="mt-2">
+                        <input
+                          id="email"
+                          name="email"
+                          type="email"
+                          className="block w-full rounded-md border-0 p-2 text-gray-50 shadow-sm text-base placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -394,12 +410,12 @@ export default function Profile({gridrows}) {
           </div>
 
           <div className="mt-6 flex items-center justify-end gap-x-6 font-dm-sans">
-            <button type="button" className="font-montserrat text-t-text leading-6">
+            <button type="button" className="font-montserrat text-t-text leading-6 text-[1rem]">
               Cancel
             </button>
             <button
               type="submit"
-              className="w-3/4 rounded-md font-montserrat focus-visible:ring-border-primary gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary bg-background-alternative p-2 text-[#BF8B30] hover:text-black border-[#BF8B30] hover:bg-[#BF8B30]"
+              className="w-3/4 rounded-md font-montserrat focus-visible:ring-border-primary gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary bg-background-alternative p-2 text-[#BF8B30] text-[1rem] hover:text-black border-[#BF8B30] hover:bg-[#BF8B30]"
             >
               Save
             </button>

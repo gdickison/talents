@@ -236,6 +236,26 @@ p, .p {
 
 /* END PROFILE FORM TRANSITION */
 
+/* PERSONAL FORM TRANSITION */
+
+#personal-input:checked ~ #personal-form-wrapper {
+  grid-template-rows: 1fr;
+}
+
+#personal-form-arrow {
+  transition: transform 0.5s ease-in-out;
+}
+
+#personal-input:checked ~ label > #personal-form-arrow {
+  transform: rotate(-90deg);
+}
+
+#personal-form {
+  overflow: hidden;
+}
+
+/* END PROFILE FORM TRANSITION */
+
 /* SMALL TOGGLE */
 
 /* From Uiverse.io by AbanoubMagdy1 */

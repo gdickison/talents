@@ -17,7 +17,7 @@ async function Product ({ params }) {
           </div>
           <div className="flex justify-center items-center flex-col gap-8">
             <div className="w-full items-center">
-              <h2 className="font-marcellus text-3xl leading-9 mt-4">{product.title}</h2>
+              <h2 className="font-marcellus text-3xl leading-9 mt-4 text-t-text">{product.title}</h2>
               <div className="w-full mt-7 bg-transparent">
                 <div className="bg-gray-800 rounded-lg" >
                   <img src={product.thumbnail} alt={product.title} className="w-full bg-transparent" />

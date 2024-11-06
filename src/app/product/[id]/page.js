@@ -23,7 +23,7 @@ async function Product ({ params }) {
                   <img src={product.thumbnail} alt={product.title} className="w-full bg-transparent" />
                 </div>
               </div>
-              <p className="font-montserrat font-normal text-base leading-6 mt-7 mx-2 px-2 py-2 border-l-[6px] border-yellow-300/10 bg-yellow-200/5 rounded-r-md">{product.description}</p>
+              <p className="font-montserrat font-normal text-base leading-5 mt-7 mx-2 px-2 py-2 border-l-[6px] border-yellow-300/10 bg-yellow-200/5 rounded-r-md">{product.description}</p>
               <p className="font-montserrat lg:text-2xl text-xl lg:leading-6 leading-5 mt-6 ">${product.price.toFixed(2)}</p>
               <div className="mt-6">
                 <div className="">

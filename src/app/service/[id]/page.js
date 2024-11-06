@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { services } from "../../../../lib/local-data"
 
 function Service({ params }) {

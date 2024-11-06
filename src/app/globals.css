@@ -196,26 +196,6 @@ p, .p {
 
 /* END TOGGLE SWITCH */
 
-/* PROFILE FORM TRANSITION */
-
-#profile-input:checked ~ #profile-form-wrapper {
-  grid-template-rows: 1fr;
-}
-
-#profile-form-arrow {
-  transition: transform 0.5s ease-in-out;
-}
-
-#profile-input:checked ~ label > #profile-form-arrow {
-  transform: rotate(-90deg);
-}
-
-#profile-form {
-  overflow: hidden;
-}
-
-/* END PROFILE FORM TRANSITION */
-
 /* PLAID FORM TRANSITION */
 
 #plaid-input:checked ~ #plaid-form-wrapper {
@@ -234,7 +214,7 @@ p, .p {
   overflow: hidden;
 }
 
-/* END PROFILE FORM TRANSITION */
+/* END PLAID FORM TRANSITION */
 
 /* PERSONAL FORM TRANSITION */
 
@@ -254,7 +234,27 @@ p, .p {
   overflow: hidden;
 }
 
-/* END PROFILE FORM TRANSITION */
+/* END PERSONAL FORM TRANSITION */
+
+/* BUSINESS FORM TRANSITION */
+
+#business-input:checked ~ #business-form-wrapper {
+  grid-template-rows: 1fr;
+}
+
+#business-form-arrow {
+  transition: transform 0.5s ease-in-out;
+}
+
+#business-input:checked ~ label > #business-form-arrow {
+  transform: rotate(-90deg);
+}
+
+#business-form {
+  overflow: hidden;
+}
+
+/* END BUSINESS FORM TRANSITION */
 
 /* SMALL TOGGLE */
 

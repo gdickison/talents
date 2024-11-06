@@ -6,18 +6,7 @@ export default function Profile({gridrows}) {
   // Set gridrows to 1 for development, 0 for production. 1 will always show the form; 0 will hide the form pending the transition 
   return (
     <div className='mb-24'>
-      <style>
-        {`#profile-form-wrapper {
-            display: grid;
-            grid-template-rows: ${gridrows || 0}fr;
-            transition: grid-template-rows 1.0s ease-out;
-        }`}
-      </style>
-      <input id='profile-input' type="checkbox" className='hidden' />
-      <label htmlFor="profile-input" className='flex items-center space-x-1 cursor-pointer px-3'>
-        <h4 className='font-marcellus text-t-text'>Profile</h4>
-        <img id='profile-form-arrow' src="/arrow_down.png" alt="open profile" className='h-6 w-6' />
-      </label>
+      <h1 className='font-marcellus text-t-text text-left px-3 text-5xl'>Profile</h1>
       <div id="profile-form-wrapper" >
         <form id='profile-form' className='px-3 text-left'>
           <div className="space-y-12 font-dm-sans">
@@ -157,6 +146,7 @@ export default function Profile({gridrows}) {
               </div>
             </div>
 
+            {/* PERSONAL PROFILE INPUTS */}
             <div className="border-b border-gray-50/10 pb-12">
               <style>
                 {`#personal-form-wrapper {
@@ -298,124 +288,140 @@ export default function Profile({gridrows}) {
               </div>
             </div>
 
+            {/* BUSINESS INFORMATION INPUTS */}
             <div className="border-b border-gray-50/10 pb-12">
-            <div className="flex flex-col gap-4">
-                <h2 className="block text-[1.15rem] font-medium leading-6 text-t-text font-montserrat">Business Information</h2>
-                <SmallToggle
-                  label={'Toggle to make public'}
-                />
-              </div>
-
-              <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8">
-                <div className="">
-                  <label htmlFor="first-name" className="block text-[1rem] font-medium leading-6 text-t-text font-montserrat">
-                    Business name
-                  </label>
-                  <div className="mt-2">
-                    <input
-                      id="first-name"
-                      name="first-name"
-                      type="text"
-                      className="block w-full rounded-md border-0 p-2 text-gray-50 shadow-sm text-base placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
+              <style>
+                {`#business-form-wrapper {
+                    display: grid;
+                    grid-template-rows: ${gridrows || 0}fr;
+                    transition: grid-template-rows 0.75s ease-out;
+                }`}
+              </style>
+              <input id='business-input' type="checkbox" className='hidden' />
+              <label htmlFor="business-input" className='flex items-center space-x-1 cursor-pointer'>
+                <h2 className="block text-2xl leading-6 text-t-text font-marion">Business Information</h2>
+                <img id='business-form-arrow' src="/arrow_down.png" alt="open business form" className='h-6 w-6' />
+              </label>
+              <div id="business-form-wrapper">
+                <div id="business-form">
+                  <div className="mt-10 flex flex-col gap-4">
+                    <SmallToggle
+                      label={'Toggle to make public'}
                     />
                   </div>
-                </div>
 
-                <div className="">
-                  <label htmlFor="email" className="block text-[1rem] font-medium leading-6 text-t-text font-montserrat">
-                    Busienss email address
-                  </label>
-                  <div className="mt-2">
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      className="block w-full rounded-md border-0 p-2 text-gray-50 shadow-sm text-base placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
-                    />
-                  </div>
-                </div>
+                  <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8">
+                    <div className="">
+                      <label htmlFor="first-name" className="block text-[1rem] font-medium leading-6 text-t-text font-montserrat">
+                        Business name
+                      </label>
+                      <div className="mt-2">
+                        <input
+                          id="first-name"
+                          name="first-name"
+                          type="text"
+                          className="block w-full rounded-md border-0 p-2 text-gray-50 shadow-sm text-base placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
+                        />
+                      </div>
+                    </div>
 
-                <div className="">
-                  <label htmlFor="country" className="block text-[1rem] font-medium leading-6 text-t-text font-montserrat">
-                    State where business is organized
-                  </label>
-                  <div className="mt-2">
-                    <input
-                      id="state-of-organization"
-                      name="state-of-organization"
-                      type="text"
-                      className="block w-full rounded-md border-0 p-2 text-gray-50 shadow-sm text-base placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
-                    />
-                  </div>
-                </div>
+                    <div className="">
+                      <label htmlFor="email" className="block text-[1rem] font-medium leading-6 text-t-text font-montserrat">
+                        Busienss email address
+                      </label>
+                      <div className="mt-2">
+                        <input
+                          id="email"
+                          name="email"
+                          type="email"
+                          className="block w-full rounded-md border-0 p-2 text-gray-50 shadow-sm text-base placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
+                        />
+                      </div>
+                    </div>
 
-                <div className="">
-                  <label htmlFor="country" className="block text-[1rem] font-medium leading-6 text-t-text font-montserrat">
-                    EIN / TIN
-                  </label>
-                  <div className="mt-2">
-                    <input
-                      id="ein"
-                      name="ein"
-                      type="text"
-                      className="block w-full rounded-md border-0 p-2 text-gray-50 shadow-sm text-base placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
-                    />
-                  </div>
-                </div>
+                    <div className="">
+                      <label htmlFor="country" className="block text-[1rem] font-medium leading-6 text-t-text font-montserrat">
+                        State where business is organized
+                      </label>
+                      <div className="mt-2">
+                        <input
+                          id="state-of-organization"
+                          name="state-of-organization"
+                          type="text"
+                          className="block w-full rounded-md border-0 p-2 text-gray-50 shadow-sm text-base placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
+                        />
+                      </div>
+                    </div>
 
-                <div className="col-span-full">
-                  <label htmlFor="street-address" className="block text-[1rem] font-medium leading-6 text-t-text font-montserrat">
-                    Street address
-                  </label>
-                  <div className="mt-2">
-                    <input
-                      id="street-address"
-                      name="street-address"
-                      type="text"
-                      className="block w-full rounded-md border-0 p-2 text-gray-50 shadow-sm text-base placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
-                    />
-                  </div>
-                </div>
+                    <div className="">
+                      <label htmlFor="country" className="block text-[1rem] font-medium leading-6 text-t-text font-montserrat">
+                        EIN / TIN
+                      </label>
+                      <div className="mt-2">
+                        <input
+                          id="ein"
+                          name="ein"
+                          type="text"
+                          className="block w-full rounded-md border-0 p-2 text-gray-50 shadow-sm text-base placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
+                        />
+                      </div>
+                    </div>
 
-                <div className="">
-                  <label htmlFor="city" className="block text-[1rem] font-medium leading-6 text-t-text font-montserrat">
-                    City
-                  </label>
-                  <div className="mt-2">
-                    <input
-                      id="city"
-                      name="city"
-                      type="text"
-                      className="block w-full rounded-md border-0 p-2 text-gray-50 shadow-sm text-base placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
-                    />
-                  </div>
-                </div>
+                    <div className="col-span-full">
+                      <label htmlFor="street-address" className="block text-[1rem] font-medium leading-6 text-t-text font-montserrat">
+                        Street address
+                      </label>
+                      <div className="mt-2">
+                        <input
+                          id="street-address"
+                          name="street-address"
+                          type="text"
+                          className="block w-full rounded-md border-0 p-2 text-gray-50 shadow-sm text-base placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
+                        />
+                      </div>
+                    </div>
 
-                <div className="">
-                  <label htmlFor="region" className="block text-[1rem] font-medium leading-6 text-t-text font-montserrat">
-                    State / Province
-                  </label>
-                  <div className="mt-2">
-                    <input
-                      id="region"
-                      name="region"
-                      type="text"
-                      className="block w-full rounded-md border-0 p-2 text-gray-50 shadow-sm text-base placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
-                    />
-                  </div>
-                </div>
+                    <div className="">
+                      <label htmlFor="city" className="block text-[1rem] font-medium leading-6 text-t-text font-montserrat">
+                        City
+                      </label>
+                      <div className="mt-2">
+                        <input
+                          id="city"
+                          name="city"
+                          type="text"
+                          className="block w-full rounded-md border-0 p-2 text-gray-50 shadow-sm text-base placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
+                        />
+                      </div>
+                    </div>
 
-                <div className="">
-                  <label htmlFor="postal-code" className="block text-[1rem] font-medium leading-6 text-t-text font-montserrat">
-                    ZIP / Postal code
-                  </label>
-                  <div className="mt-2">
-                    <input
-                      id="postal-code"
-                      name="postal-code"
-                      type="text"
-                      className="block w-full rounded-md border-0 p-2 text-gray-50 shadow-sm text-base placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
-                    />
+                    <div className="">
+                      <label htmlFor="region" className="block text-[1rem] font-medium leading-6 text-t-text font-montserrat">
+                        State / Province
+                      </label>
+                      <div className="mt-2">
+                        <input
+                          id="region"
+                          name="region"
+                          type="text"
+                          className="block w-full rounded-md border-0 p-2 text-gray-50 shadow-sm text-base placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="">
+                      <label htmlFor="postal-code" className="block text-[1rem] font-medium leading-6 text-t-text font-montserrat">
+                        ZIP / Postal code
+                      </label>
+                      <div className="mt-2">
+                        <input
+                          id="postal-code"
+                          name="postal-code"
+                          type="text"
+                          className="block w-full rounded-md border-0 p-2 text-gray-50 shadow-sm text-base placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-t-orange outline-t-orange bg-t-brown"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
